@@ -87,13 +87,9 @@ const Container = (props) => {
   return (
     <div className="container"> 
       {/* Planets list */}
-      {planets.map( planet =>
+      {props.planets.map( planet =>
         <Planet 
-          name={planet.name}
-          diameter={planet.diameter}
-          moons={planet.moons}
-          desc={planet.desc}
-          url={planet.url}
+          {...planet}
           key={planet.id.toString()}
         />
       )}
@@ -103,6 +99,6 @@ const Container = (props) => {
 
 
 ReactDOM.render(
-  <Container />,
+  <Container planets={planets}/>,
   document.getElementById('root')
 );
