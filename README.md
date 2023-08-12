@@ -1,2 +1,2 @@
 # Planets
- React application displaying planet information
+ React application rendering planet information from an array using stateless functional components.
